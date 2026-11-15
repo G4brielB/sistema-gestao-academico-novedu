@@ -74,6 +74,7 @@ model User {
   isActive  Boolean   @default(true) @map("is_active")
   createdAt DateTime  @default(now()) @map("created_at") @db.Timestamp(6)
   updatedAt DateTime? @updatedAt @map("updated_at") @db.Timestamp(6)
+  mustChangePassword Boolean @default(true) @map("must_change_password")
 
   student       Student?
   teacher       Teacher?
